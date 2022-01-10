@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  height: 100vh;
+}
+
+.banner-left {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-right img {
+  box-shadow: 5px 10px 50px #ac2f16a8;
+  width: 75%;
+}
+
+.banner-title {
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 110px;
+  margin-right: 5%;
+  position: relative;
+  color: transparent;
+}
+
+.banner-title::before {
+  content: "DOTA 2";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: #ac2e16;
+  animation: typing 5s linear infinite;
+}
+
+.banner-text {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.play-btn {
+  outline: 0;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 40px;
+  background-color: #ac2e16;
+  border: 2px solid transparent;
+  box-shadow: 5px 10px 50px #ac2f16a8;
+  cursor: pointer;
+}
+
+@keyframes typing {
+  0% {
+    content: "D|";
+  }
+  10% {
+    content: "DO|";
+  }
+  20% {
+    content: "DOT|";
+  }
+  30% {
+    content: "DOTA|";
+  }
+  40% {
+    content: "DOTA |";
+  }
+  50% {
+    content: "DOTA 2|";
+  }
+  51%,
+  80% {
+    content: "DOTA 2|";
+  }
+  84% {
+    content: "DOTA |";
+  }
+  88% {
+    content: "DOTA|";
+  }
+  92% {
+    content: "DOT|";
+  }
+  96% {
+    content: "DO|";
+  }
+  100% {
+    content: "D|";
+  }
+}
