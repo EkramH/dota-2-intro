@@ -65,10 +65,13 @@ body {
 .play-btn {
   outline: 0;
   text-decoration: none;
+  font-weight: 500;
   font-size: 30px;
   padding: 10px 40px;
+  color: #121212;
   background-color: #ac2e16;
   border: 2px solid transparent;
+  border-radius: 15px;
   box-shadow: 5px 10px 50px #ac2f16a8;
   cursor: pointer;
 }
