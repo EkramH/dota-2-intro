@@ -115,3 +115,99 @@ body {
     content: "D|";
   }
 }
+
+.photo {
+  height: 280px;
+  width: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.border {
+  background-color: #fff;
+  position: absolute;
+  transition: 0.7s ease-in-out;
+}
+
+.border.top,
+.border.bottom {
+  height: 4px;
+  width: 280px;
+}
+.border.left,
+.border.right {
+  height: 280px;
+  width: 4px;
+}
+
+.border.top {
+  top: 0px;
+  right: 100%;
+}
+.border.bottom {
+  bottom: 0px;
+  left: 100%;
+}
+.border.left {
+  left: 0px;
+  top: 100%;
+}
+.border.right {
+  right: 0px;
+  bottom: 100%;
+}
+
+.photo:hover .border.top {
+  right: 0px;
+}
+.photo:hover .border.bottom {
+  left: 0px;
+}
+.photo:hover .border.left {
+  top: 0px;
+}
+.photo:hover .border.right {
+  bottom: 0px;
+}
+
+.photo-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-left: 30px;
+  bottom: 0;
+  left: 0;
+  transform: translateY(400px);
+  transition: 0.5s ease-in-out;
+}
+
+.photo:hover .photo-content {
+  transform: translateY(200px);
+}
+
+.photo::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.349);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.3s linear;
+}
+
+.photo:hover::before {
+  opacity: 1;
+}
+
+.photo-content h2 {
+  text-transform: uppercase;
+}
